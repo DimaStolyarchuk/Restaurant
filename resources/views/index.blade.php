@@ -1,89 +1,15 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
-    <title>Spicyo</title>
-    <meta name="keywords" content="">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <link rel="stylesheet" href='{{ asset('css/bootstrap.min.css') }}'>
-    <link rel="stylesheet" href='{{ asset('css/owl.carousel.min.css') }}'>
-    <link rel="stylesheet" href='{{ asset('css/style.css') }}'>
-    <link rel="stylesheet" href='{{ asset('css/responsive.css') }}'>
-    <link rel="stylesheet" href='{{ asset('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css') }}'>
-    <script src='{{ asset('https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js') }}'></script>
-    <script src='{{ asset('https://oss.maxcdn.com/respond/1.4.2/respond.min.js') }}'></script>
-</head>
+@extends('layout')
 
 <body class="main-layout">
 
-    <div class="loader_bg">
-
-        <div class="loader"><img src='{{ asset('images/loading.gif') }}' alt="" /></div>
-    </div>
+@include('loading_gif')
 
 <div class="wrapper">
-    <div class="sidebar">
-        <nav id="sidebar">
-            <div id="dismiss">
-                <i class="fa fa-arrow-left"></i>
-            </div>
-                <ul class="list-unstyled components">
-                  <li class="active">
-                      <a href="index.html">Home</a>
-                   </li>
-                  <li>
-                      <a href="about.html">About</a>
-                  </li>
-                   <li>
-                       <a href="recipe.html">Recipe</a>
-                    </li>
-                     <li>
-                        <a href="blog.html">Blog</a>
-                     </li>
-                     <li>
-                        <a href="contact.html">Contact Us</a>
-                    </li>
-                </ul>
-        </nav>
-    </div>
-    <div id="content">
+    @include('menu')
+<div id="content">
 
-        <header>
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-md-3">
-                        <div class="full">
-                            <a class="logo" href="index.html"><img src="images/logo.png" alt="#" /></a>
-                        </div>
-                    </div>
-                    <div class="col-md-9">
-                        <div class="full">
-                            <div class="right_header_info">
-                                <ul>
-                                    <li class="dinone">Contact Us : <img style="margin-right: 15px;margin-left: 15px;" src="images/phone_icon.png" alt="#"><a href="#">987-654-3210</a></li>
-                                    <li class="dinone"><img style="margin-right: 15px;" src="images/mail_icon.png" alt="#"><a href="#">demo@gmail.com</a></li>
-                                    <li class="dinone"><img style="margin-right: 15px;height: 21px;position: relative;top: -2px;" src="images/location_icon.png" alt="#"><a href="#">104 New york , USA</a></li>
-                                    <li class="button_user"><a class="button active" href="#">Login</a><a class="button" href="#">Register</a></li>
-                                    <li><img style="margin-right: 15px;" src="images/search_icon.png" alt="#"></li>
-                                    <li>
-                                        <button type="button" id="sidebarCollapse">
-                                            <img src="images/menu_icon.png" alt="#">
-                                        </button>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </header>
-        <!-- end header -->
-        <!-- start slider section -->
+    @include('header')
+
         <div class="slider_section">
             <div class="container">
                 <div class="row">
@@ -95,9 +21,9 @@
                                         <div class="row">
                                             <div class="col-md-5">
                                                 <div class="slider_cont">
-                                                    <h3>Discover Restaurants<br>That deliver near You</h3>
-                                                    <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
-                                                    <a class="main_bt_border" href="#">Order Now</a>
+                                                    <h3>Відкрийте для себе ресторани<br>Що доставляють біля вас</h3>
+                                                    <p>Замовляйте їжу додому, в офіс та будь куди для себе рідних та друзів. І відпочивайте разом з нами</p>
+                                                    <a class="main_bt_border" href="#">Зробити замовлення</a>
                                                 </div>
                                             </div>
                                             <div class="col-md-7">
@@ -111,9 +37,9 @@
                                         <div class="row">
                                             <div class="col-md-5">
                                                 <div class="slider_cont">
-                                                    <h3>Discover Restaurants<br>That deliver near You</h3>
-                                                    <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
-                                                    <a class="main_bt_border" href="#">Order Now</a>
+                                                    <h3>Постійним замовникам<br>знижка</h3>
+                                                    <p>Наших постійних клієнтів ми завжди раді бачити, тому для них існують знижки. Дізнатися про це можна перейшовши по посиланню</p>
+                                                    <a class="main_bt_border" href="#">Посилання</a>
                                                 </div>
                                             </div>
                                             <div class="col-md-7 full text_align_center">
@@ -136,41 +62,26 @@
                 </div>
             </div>
         </div>
-        <!-- end slider section -->
 
-
-
-
-
-
-
-
-
-
-
-
-
-        <!-- section -->
         <section class="resip_section">
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
                         <div class="ourheading">
-                            <h2>Our Recipes</h2>
+                            <h2>Наші страви</h2>
                         </div>
                     </div>
                     <div class="container">
                         <div class="row">
                             <div class="col-md-12">
                                 <div class="owl-carousel owl-theme">
-
                                     <div class="item">
                                         <div class="product_blog_img">
                                             <img src="images/rs1.png" alt="#" />
                                         </div>
                                         <div class="product_blog_cont">
-                                            <h3>Homemade</h3>
-                                            <h4><span class="theme_color">$</span>10</h4>
+                                            <h3>Солянка</h3>
+                                            <h4><span class="theme_color">₴</span>120</h4>
                                         </div>
                                     </div>
                                     <div class="item">
@@ -178,83 +89,82 @@
                                             <img src="images/rs2.png" alt="#" />
                                         </div>
                                         <div class="product_blog_cont">
-                                            <h3>Noodles</h3>
-                                            <h4><span class="theme_color">$</span>20</h4>
+                                            <h3>Спагеті</h3>
+                                            <h4><span class="theme_color">₴</span>80</h4>
                                         </div>
                                     </div>
-                                    <div class="item">
-                                        <div class="product_blog_img">
-                                            <img src="images/rs3.png" alt="#" />
-                                        </div>
-                                        <div class="product_blog_cont">
-                                            <h3>Egg</h3>
-                                            <h4><span class="theme_color">$</span>30</h4>
-                                        </div>
-                                    </div>
-                                    <div class="item">
-                                        <div class="product_blog_img">
-                                            <img src="images/rs4.png" alt="#" />
-                                        </div>
-                                        <div class="product_blog_cont">
-                                            <h3>Sushi Dizzy</h3>
-                                            <h4><span class="theme_color">$</span>40</h4>
-                                        </div>
-                                    </div>
-                                    <div class="item">
-                                        <div class="product_blog_img">
-                                            <img src="images/rs5.png" alt="#" />
-                                        </div>
-                                        <div class="product_blog_cont">
-                                            <h3>The Coffee Break</h3>
-                                            <h4><span class="theme_color">$</span>50</h4>
-                                        </div>
-                                    </div>
-                                    <div class="item">
-                                        <div class="product_blog_img">
-                                            <img src="images/rs1.png" alt="#" />
-                                        </div>
-                                        <div class="product_blog_cont">
-                                            <h3>Homemade</h3>
-                                            <h4><span class="theme_color">$</span>10</h4>
-                                        </div>
-                                    </div>
-                                    <div class="item">
-                                        <div class="product_blog_img">
-                                            <img src="images/rs2.png" alt="#" />
-                                        </div>
-                                        <div class="product_blog_cont">
-                                            <h3>Noodles</h3>
-                                            <h4><span class="theme_color">$</span>20</h4>
-                                        </div>
-                                    </div>
-                                    <div class="item">
-                                        <div class="product_blog_img">
-                                            <img src="images/rs3.png" alt="#" />
-                                        </div>
-                                        <div class="product_blog_cont">
-                                            <h3>Egg</h3>
-                                            <h4><span class="theme_color">$</span>30</h4>
-                                        </div>
-                                    </div>
-                                    <div class="item">
-                                        <div class="product_blog_img">
-                                            <img src="images/rs4.png" alt="#" />
-                                        </div>
-                                        <div class="product_blog_cont">
-                                            <h3>Sushi Dizzy</h3>
-                                            <h4><span class="theme_color">$</span>40</h4>
-                                        </div>
-                                    </div>
-                                    <div class="item">
-                                        <div class="product_blog_img">
-                                            <img src="images/rs5.png" alt="#" />
-                                        </div>
-                                        <div class="product_blog_cont">
-                                            <h3>The Coffee Break</h3>
-                                            <h4><span class="theme_color">$</span>50</h4>
-                                        </div>
-                                    </div>
-
+{{--                                    <div class="item">--}}
+{{--                                        <div class="product_blog_img">--}}
+{{--                                            <img src="images/rs3.png" alt="#" />--}}
+{{--                                        </div>--}}
+{{--                                        <div class="product_blog_cont">--}}
+{{--                                            <h3>Egg</h3>--}}
+{{--                                            <h4><span class="theme_color">$</span>30</h4>--}}
+{{--                                        </div>--}}
+{{--                                    </div>--}}
+{{--                                    <div class="item">--}}
+{{--                                        <div class="product_blog_img">--}}
+{{--                                            <img src="images/rs4.png" alt="#" />--}}
+{{--                                        </div>--}}
+{{--                                        <div class="product_blog_cont">--}}
+{{--                                            <h3>Sushi Dizzy</h3>--}}
+{{--                                            <h4><span class="theme_color">$</span>40</h4>--}}
+{{--                                        </div>--}}
+{{--                                    </div>--}}
+{{--                                    <div class="item">--}}
+{{--                                        <div class="product_blog_img">--}}
+{{--                                            <img src="images/rs5.png" alt="#" />--}}
+{{--                                        </div>--}}
+{{--                                        <div class="product_blog_cont">--}}
+{{--                                            <h3>The Coffee Break</h3>--}}
+{{--                                            <h4><span class="theme_color">$</span>50</h4>--}}
+{{--                                        </div>--}}
+{{--                                    </div>--}}
+{{--                                    <div class="item">--}}
+{{--                                        <div class="product_blog_img">--}}
+{{--                                            <img src="images/rs1.png" alt="#" />--}}
+{{--                                        </div>--}}
+{{--                                        <div class="product_blog_cont">--}}
+{{--                                            <h3>Homemade</h3>--}}
+{{--                                            <h4><span class="theme_color">$</span>10</h4>--}}
+{{--                                        </div>--}}
+{{--                                    </div>--}}
+{{--                                    <div class="item">--}}
+{{--                                        <div class="product_blog_img">--}}
+{{--                                            <img src="images/rs2.png" alt="#" />--}}
+{{--                                        </div>--}}
+{{--                                        <div class="product_blog_cont">--}}
+{{--                                            <h3>Noodles</h3>--}}
+{{--                                            <h4><span class="theme_color">$</span>20</h4>--}}
+{{--                                        </div>--}}
+{{--                                    </div>--}}
+{{--                                    <div class="item">--}}
+{{--                                        <div class="product_blog_img">--}}
+{{--                                            <img src="images/rs3.png" alt="#" />--}}
+{{--                                        </div>--}}
+{{--                                        <div class="product_blog_cont">--}}
+{{--                                            <h3>Egg</h3>--}}
+{{--                                            <h4><span class="theme_color">$</span>30</h4>--}}
+{{--                                        </div>--}}
+{{--                                    </div>--}}
+{{--                                    <div class="item">--}}
+{{--                                        <div class="product_blog_img">--}}
+{{--                                            <img src="images/rs4.png" alt="#" />--}}
+{{--                                        </div>--}}
+{{--                                        <div class="product_blog_cont">--}}
+{{--                                            <h3>Sushi Dizzy</h3>--}}
+{{--                                            <h4><span class="theme_color">$</span>40</h4>--}}
+{{--                                        </div>--}}
+{{--                                    </div>--}}
+{{--                                    <div class="item">--}}
+{{--                                        <div class="product_blog_img">--}}
+{{--                                            <img src="images/rs5.png" alt="#" />--}}
+{{--                                        </div>--}}
+{{--                                        <div class="product_blog_cont">--}}
+{{--                                            <h3>The Coffee Break</h3>--}}
+{{--                                            <h4><span class="theme_color">$</span>50</h4>--}}
+{{--                                        </div>--}}
+{{--                                    </div>--}}
                                 </div>
                             </div>
                         </div>
@@ -270,9 +180,9 @@
                         <div class="col-md-12">
                             <div class="title">
                                 <i><img src="images/title.png" alt="#"/></i>
-                                <h2>About Our Food & Restaurant</h2>
-                                <span>It is a long established fact that a reader will be distracted by the readable content of a
-                   <br> page when looking at its layout. The point of using Lorem
+                                <h2>Про нашу їжу та ресторан</h2>
+                                <span>Ми зібрали найкращих кухарів з усього світу для виготовлення найкращих страв,
+                   <br> щоб ви могли насолоджуватися чудовою та вишуканою їжею
                 </span>
                             </div>
                         </div>
@@ -280,9 +190,17 @@
                     <div class="row">
                         <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
                             <div class="about_box">
-                                <h3>Best Food</h3>
-                                <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscureContrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard </p>
-                                <a href="#">Read More <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
+                                <h3>Одна із кращих страв</h3>
+                                <p>Напевно, ви не раз готували рибу хек або минтай: запікали з овочами, смажили в паніровці, додавали в юшку та інше.
+                                    Я теж буду смажити, але в паніровці з манною крупою. Незвично, згоден, але вам сподобається хрустка скоринка. І це не все.
+                                    Соус Сабайон – це вишенька на торті, точніше, на моїй рибі й не вишенька, а піна. Мені подобається цей соус тим, що він універсальний:
+                                    його подають як до десертів, так і м’яса, риби, і овочів. Втім, соус Сабайон цілком може претендувати на звання самостійного
+                                    зробили, виклали в склянку та їжте ложкою або налийте в келих, прикрасьте полуницею та пийте. Соус Сабайон родом з Італії, із П’ємонту.
+                                    Існує легенда: в XVI столітті на монастирській кухні щось пішло не так і яйця з цукром погано збили, потім ченці додали солодкого кіпрського
+                                    й так вийшов цей соус. Існує й ще більш рання легенда. У 1471 році капітану Джованні Паоло Бальоні потрібно було чимось годувати своїх
+                                    тому в місцевих жителів він зібрав їх припаси: яйця, цукор і вино. Він не володів кулінарними навичками, тому просто взяв і змішав всі
+                                    інгредієнти. Вийшов такий собі суп, який згодом став соусом або його ще називають кремом. </p>
+{{--                                <a href="#">Read More <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>--}}
                             </div>
                         </div>
                         <div class="col-xl-5 col-lg-5 col-md-10 col-sm-12 about_img_boxpdnt">
@@ -302,8 +220,8 @@
                         <div class="col-md-12">
                             <div class="title">
                                 <i><img src="images/title.png" alt="#"/></i>
-                                <h2>Our Blog</h2>
-                                <span>when looking at its layout. The point of using Lorem</span>
+                                <h2>Наш блог</h2>
+                                <span>Тут ви можете дізнатися про нові страви, що у нас з'явилися</span>
                             </div>
                         </div>
                     </div>
@@ -312,33 +230,48 @@
                             <div class="blog_box">
                                 <div class="blog_img_box">
                                     <figure><img src="images/blog_img1.png" alt="#"/>
-                                        <span>02 FEB 2019</span>
+                                        <span>15 січня 2019</span>
                                     </figure>
                                 </div>
-                                <h3>Spicy Barger</h3>
-                                <p>The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the </p>
+                                <h3>Бургер "King"</h3>
+                                <p>Класичний американський бургер для жителів США - не просто їжа, а частина життя, культури, якщо хочете!
+                                    І хоча за однією з версії появи на світло цієї страви автором був емігрант з Гамбурга, це не скасовує
+                                    того факту, що придумано воно було в Новому Світі. І далі справа пішла! У 1904 році на ярмарку в Сент-Луїсі
+                                    бургери «розсмакували», і вони стали набирати популярність. А через 30 років, коли Уолтер Андерсон заснував
+                                    в Канзасі мережа закусочних White Castle Hamburger, блюдо вже можна було сміливо називати гастрономічним
+                                    символом Америки. У наш час класичний американський бургер готують по всьому світу. Але щоб бути впевненим
+                                    в якості, краще спробувати відтворити цей сендвіч будинку, на власній кухні.</p>
                             </div>
                         </div>
                         <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 mar_bottom">
                             <div class="blog_box">
                                 <div class="blog_img_box">
                                     <figure><img src="images/blog_img2.png" alt="#"/>
-                                        <span>02 FEB 2019</span>
+                                        <span>21 вересня 2018</span>
                                     </figure>
                                 </div>
-                                <h3>Egg & Tosh</h3>
-                                <p>The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the </p>
+                                <h3>Яйця та тости</h3>
+                                <p>Гарний сніданок повинен бути не тільки смачним і поживним, а й дуже швидким. Адже ми всі поспішаємо у своїх справах,
+                                    деколи навіть у вихідні. Саме тому більшість рецептів сніданку мають в основі або вівсянку, або яйця – продукти, які
+                                    можна приготувати за лічені хвилини. Якщо говорити про яєчні сніданки, то я їх просто обожнюю, а якщо застосувати трохи
+                                    фантазії, можна і їх зробити досить різноманітними. Наприклад, звичайна яєчня, французький омлет або арабська шакшука.
+                                    Сьогодні ж я пропоную приготувати дуже прості і смачні тости з яйцем скрамбл. </p>
                             </div>
                         </div>
                         <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
                             <div class="blog_box">
                                 <div class="blog_img_box">
                                     <figure><img src="images/blog_img3.png" alt="#"/>
-                                        <span>02 FEB 2019</span>
+                                        <span>14 травня 2019</span>
                                     </figure>
                                 </div>
-                                <h3>Pizza</h3>
-                                <p>The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the </p>
+                                <h3>Піцца</h3>
+                                <p>Я впевнений, що багато хто з вас обожнює піцу. Мені взагалі здається, що цей дивовижний кулінарний винахід італійців вплинув
+                                    на хід історії. І не тільки італійської. Це ціла індустрія з величезними оборотами грошей і полем для творчості. Класичні
+                                    рецепти піци, як то «Маргарита», схоже, будуть жити вічно незалежно від моди і мінливих кулінарних уподобань. Але смак справжньої
+                                    піци обумовлений не стільки її наповненням, скільки якістю тіста в її основі. Звичайно, багато чого тут залежить від якості самого
+                                    борошна і нас, можливо і не вийде точно таке ж тісто, як у піцайоло в Неаполі, але це зовсім не означає, що нам не потрібно спробувати.
+                                    Тим більше, що приготувати тісто для піци досить просто.</p>
                             </div>
                         </div>
                     </div>
@@ -353,7 +286,7 @@
                         <div class="col-md-12">
                             <div class="title">
                                 <i><img src="images/title.png" alt="#"/></i>
-                                <h2>Our Client</h2>
+                                <h2>Наші постійні клієнти</h2>
                             </div>
                         </div>
                     </div>
@@ -361,8 +294,10 @@
                         <div class="col-md-6 offset-md-3">
                             <div class="Client_box">
                                 <img src="images/client.jpg" alt="#"/>
-                                <h3>Roock Due</h3>
-                                <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don’t look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn’t anything embarrassing hidden in the middle of text.</p>
+                                <h3>Шрам Дмитро</h3>
+                                <p>Вперше в цей ресторан мене запросили мої друзі. Мені дуже сподобався і як виглядав сам ресторан, і які приємні люди в ньому працюють.
+                                    С того часу я став постійним клієнтом цього закладу і тепер сам запрошую своїх друзів та колег сюди. Усім рекомендую ресторан SPICYO!
+                                    Прийшовши сюди Ви не пошкодуєте</p>
                                 <i><img src="images/client_icon.png" alt="#"/></i>
                             </div>
                         </div>
@@ -377,7 +312,7 @@
                 <div class="container-fluid">
                     <div class="row">
                         <div class=" col-md-12">
-                            <h2>Request  A<strong class="white"> Call  Back</strong></h2>
+                            <h2>Замовити<strong class="white"> зворотний дзвінок</strong></h2>
                         </div>
                         <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
 
@@ -385,19 +320,19 @@
                                 <div class="row">
 
                                     <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
-                                        <input class="form-control" placeholder="Name" type="text" name="Name">
+                                        <input class="form-control" placeholder="Ім'я" type="text" name="Name">
                                     </div>
                                     <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
                                         <input class="form-control" placeholder="Email" type="text" name="Email">
                                     </div>
                                     <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
-                                        <input class="form-control" placeholder="Phone" type="text" name="Phone">
+                                        <input class="form-control" placeholder="Телефон" type="text" name="Phone">
                                     </div>
                                     <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
-                                        <textarea class="textarea" placeholder="Message" type="text" name="Message"></textarea>
+                                        <textarea class="textarea" placeholder="Повідомлення" type="text" name="Message"></textarea>
                                     </div>
                                     <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
-                                        <button class="send">Send</button>
+                                        <button class="send">Відправити</button>
                                     </div>
                                 </div>
                             </form>
@@ -416,101 +351,24 @@
                         </div>
                         <div class="col-md-12">
                             <ul class="lik">
-                                <li class="active"> <a href="index.html">Home</a></li>
-                                <li> <a href="about.html">About</a></li>
-                                <li> <a href="recipe.html">Recipe</a></li>
-                                <li> <a href="blog.html">Blog</a></li>
-                                <li> <a href="contact.html">Contact us</a></li>
+                                <li class="active"> <a href="{{ route('index') }}">Головна сторінка</a></li>
+                                <li> <a href="{{ route('about') }}">Про нас</a></li>
+                                <li> <a href="{{ route('recipe') }}">Рецепти</a></li>
+                                <li> <a href="{{ route('blog') }}">Блог</a></li>
+                                <li> <a href="{{ route('contact') }}">Наші контакти</a></li>
                             </ul>
-                        </div>
-                        <div class="col-md-12">
-                            <div class="new">
-                                <h3>Newsletter</h3>
-                                <form class="newtetter">
-                                    <input class="tetter" placeholder="Your email" type="text" name="Your email">
-                                    <button class="submit">Subscribe</button>
-                                </form>
-                            </div>
                         </div>
                     </div>
                 </div>
                 <div class="copyright">
                     <div class="container">
-                        <p>© 2019 All Rights Reserved. Design by<a href="https://html.design/"> Free Html Templates</a></p>
+                        <p>© 2017 Всі права захищені</p>
                     </div>
                 </div>
             </div>
         </fooetr>
-        <!-- end footer -->
-
-    </div>
 </div>
-<div class="overlay"></div>
-<!-- Javascript files-->
-
-
-<script src='{{ asset('js/jquery.min.js') }}'></script>
-<script src='{{ asset('js/popper.min.js') }}'></script>
-<script src='{{ asset('js/bootstrap.bundle.min.js') }}'></script>
-<script src='{{ asset('js/owl.carousel.min.js') }}'></script>
-<script src='{{ asset('js/custom.js') }}'></script>
-<script src='{{ asset('js/jquery.mCustomScrollbar.concat.min.js') }}'></script>
-
-<script src='{{ asset('js/jquery-3.0.0.min.js') }}'></script>
-<script type="text/javascript">
-    $(document).ready(function() {
-        $("#sidebar").mCustomScrollbar({
-            theme: "minimal"
-        });
-
-        $('#dismiss, .overlay').on('click', function() {
-            $('#sidebar').removeClass('active');
-            $('.overlay').removeClass('active');
-        });
-
-        $('#sidebarCollapse').on('click', function() {
-            $('#sidebar').addClass('active');
-            $('.overlay').addClass('active');
-            $('.collapse.in').toggleClass('in');
-            $('a[aria-expanded=true]').attr('aria-expanded', 'false');
-        });
-    });
-</script>
-
-<style>
-    #owl-demo .item{
-        margin: 3px;
-    }
-    #owl-demo .item img{
-        display: block;
-        width: 100%;
-        height: auto;
-    }
-</style>
-
-
-<script>
-    $(document).ready(function() {
-        var owl = $('.owl-carousel');
-        owl.owlCarousel({
-            margin: 10,
-            nav: true,
-            loop: true,
-            responsive: {
-                0: {
-                    items: 1
-                },
-                600: {
-                    items: 2
-                },
-                1000: {
-                    items: 5
-                }
-            }
-        })
-    })
-</script>
-
+</div>
+@include('scripts')
 </body>
 
-</html>

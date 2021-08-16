@@ -10,12 +10,25 @@ class PageController extends Controller
 {
    public function index()
    {
-       $dateIndexs = Index::get();
-       return view('index', compact('dateIndexs'));
+       return view('index');
    }
+
     public function about()
     {
+        return view('about');
+    }
 
-        return view('about',compact('dataAbouts'));
+    public function blog()
+    {
+        return view('blog');
+    }
+
+    public function contact()
+    {
+        return view('contact');
+    }
+    public function recipe()
+    {
+        return view('recipe');
     }
 }
