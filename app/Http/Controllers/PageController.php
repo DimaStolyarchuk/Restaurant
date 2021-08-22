@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\About;
+use App\Entry;
 use App\Index;
+use App\Recipe;
 use Illuminate\Http\Request;
 
 class PageController extends Controller
@@ -29,6 +31,14 @@ class PageController extends Controller
     }
     public function recipe()
     {
-        return view('recipe');
+        $dataRecipes = Recipe::get();
+        return view('recipe', compact('dataRecipes'));
+    }
+
+
+    public function entry()
+    {
+        $dataEntry = Entry::get();
+        return view('entry',compact('dataEntry'));
     }
 }

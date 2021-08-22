@@ -86,14 +86,14 @@
                 <a href="{{ route('admin_about') }}"><i class="fa fa-desktop"></i> Про нас(about)</a>
             </li>
             <li>
-                <a href="{{ route('admin_blog') }}"><i class="fa fa-qrcode"></i> Наші контакти(contact)</a>
+                <a href="{{ route('admin_contact') }}"><i class="fa fa-qrcode"></i> Наші контакти(contact)</a>
             </li>
 
             <li>
-                <a href="{{ route('admin_contact') }}"><i class="fa fa-table"></i> Рецепти(recipe)</a>
+                <a href="{{ route('admin_recipe') }}"><i class="fa fa-table"></i> Рецепти(recipe)</a>
             </li>
             <li>
-                <a href="{{ route('admin_recipe') }}"><i class="fa fa-edit"></i> Блог(blog) </a>
+                <a href="{{ route('admin_blog') }}"><i class="fa fa-edit"></i> Блог(blog) </a>
             </li>
 
 
