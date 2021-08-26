@@ -20,29 +20,44 @@
                     <!-- Advanced Tables -->
                     <div class="panel panel-default">
                         <div class="panel-heading">
-                            Таблиця блогу <a href="form.html"><i class="fa fa-edit"></i> Додати нові дані </a>
+                            Таблиця блогу <a href="{{ route('blog_form') }}"><i class="fa fa-edit"></i> Додати нові дані </a>
                         </div>
                         <div class="panel-body">
                             <div class="table-responsive">
                                 <table class="table table-striped table-bordered table-hover" id="dataTables-example">
                                     <thead>
                                     <tr>
-                                        <th>Колонка 1</th>
-                                        <th>Колонка 2</th>
-                                        <th>Колонка 3</th>
-                                        <th>Колонка 4</th>
-                                        <th>Колонка 5</th>
+                                        <th>Id</th>
+                                        <th>Титулка</th>
+                                        <th>Зображення</th>
+                                        <th>Дата</th>
+                                        <th>Назва</th>
+                                        <th>Опис</th>
+                                        <th>Активність</th>
+                                        <th>Преорітет</th>
                                     </tr>
                                     </thead>
-                                    <tbody>
-                                    <tr class="odd gradeX">
-                                        <td>Дані 1</td>
-                                        <td>Дані 2</td>
-                                        <td>Дані 3</td>
-                                        <td>Дані 4</td>
-                                        <td>Дані 5</td>
-                                    </tr>
-                                    </tbody>
+                                    @foreach($dataBlogs as $dataBlog)
+                                        <tr>
+                                            <th scope="row">{{$dataBlog->id}}</th>
+                                            <td>{{$dataBlog->date}}</td>
+                                            <td>{{$dataBlog->image}}</td>
+                                            <td>{{$dataBlog->title}}</td>
+                                            <td>{{$dataBlog->name}}</td>
+                                            <td>{{$dataBlog->description}}</td>
+                                            <td>{{$dataBlog->action}}</td>
+                                            <td>{{$dataBlog->priority}}</td>
+                                            <td>
+                                                <a href="{{ route('edit_blog', ['id' => $dataBlog->id]) }}">
+                                                    edit
+                                                </a>
+                                                /
+                                                <a href="{{ route('delete_blog', ['id' => $dataBlog->id]) }}">
+                                                    delete
+                                                </a>
+                                            </td>
+                                        </tr>
+                                    @endforeach
                                 </table>
                             </div>
 

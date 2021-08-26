@@ -17,7 +17,7 @@ class RecipeController extends Controller
     public function recipe_form()
     {
         $dataRecipes = [];
-        return view('admin.recipe_form', compact('$dataRecipes'));
+        return view('admin.recipe_form', compact('dataRecipes'));
     }
 
     public function saveRecipe(Request $request)
@@ -37,13 +37,13 @@ class RecipeController extends Controller
         ]);
         return back();
     }
-    public function edit_about($id)
+    public function edit_recipe($id)
     {
         $dataRecipes = Recipe::where('id', $id)->first();
-        return view('admin.edit_recipe', compact('$dataRecipes'));
+        return view('admin.recipe_edit', compact('dataRecipes'));
     }
 
-    public function delete_about($id)
+    public function delete_recipe($id)
     {
         Recipe::where('id', $id)->delete();
         return back();

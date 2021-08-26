@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\About;
+use App\Blog;
 use App\Entry;
 use App\Index;
 use App\Recipe;
@@ -17,12 +18,14 @@ class PageController extends Controller
 
     public function about()
     {
-        return view('about');
+        $dataAbouts = About::get();
+        return view('about', compact('dataAbouts'));
     }
 
     public function blog()
     {
-        return view('blog');
+        $dataBlogs = Blog::get();
+        return view('blog', compact('dataBlogs'));
     }
 
     public function contact()
