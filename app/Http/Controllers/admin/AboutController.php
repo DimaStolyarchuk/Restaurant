@@ -38,6 +38,7 @@ class AboutController extends Controller
         ]);
         return back();
     }
+
     public function edit_about($id)
     {
         $dataAbouts = About::where('id', $id)->first();
